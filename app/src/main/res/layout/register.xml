@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A1A">
+
+    <TextView
+        android:id="@+id/evTitle1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Fill Form for Appointment"
+        android:textColor="#1593ED"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/scrollView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold|italic"
+                android:id="@+id/edName"
+                android:background="@drawable/edittext"
+                android:paddingBottom="25dp"
+                android:hint="Enter Your Full Name"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:ems="10"
+                android:textStyle="bold|italic"
+                android:background="@drawable/edittext"
+                android:paddingBottom="25dp"
+                android:hint="Enter Your Age"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:id="@+id/edAge"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/edName"
+                android:layout_marginLeft="10dp" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Gender:"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold|italic"
+                android:id="@+id/Gender"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/edAge"
+                android:layout_marginLeft="10dp" />
+            <CheckBox
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:id="@+id/Male"
+                android:textColor="#FFFF"
+                android:textStyle="bold|italic"
+                android:checked="false"
+                android:textSize="15dp"
+                android:onClick="check"
+                android:layout_below="@+id/Gender"
+                android:layout_marginLeft="10dp" />
+
+            <CheckBox
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textColor="#FFFF"
+                android:textStyle="bold|italic"
+                android:id="@+id/Female"
+                android:textSize="15dp"
+                android:checked="false"
+                android:onClick="check"
+                android:layout_below="@+id/Gender"
+                android:layout_toRightOf="@+id/Male"
+                android:layout_toEndOf="@+id/Male"
+                android:layout_marginLeft="56dp"
+                android:layout_marginStart="56dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Patient Catagory:"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold|italic"
+                android:id="@+id/P_catagory"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/Female"
+                android:layout_marginLeft="10dp" />
+
+            <CheckBox
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="New Patient"
+                android:textColor="#FFFF"
+                android:textStyle="bold|italic"
+                android:id="@+id/New"
+                android:textSize="15dp"
+                android:checked="false"
+                android:onClick="pcheck"
+                android:layout_below="@+id/P_catagory"
+                android:layout_marginLeft="10dp" />
+
+
+            <CheckBox
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Old Patient"
+                android:textColor="#FFFF"
+                android:textStyle="bold|italic"
+                android:id="@+id/Old"
+                android:textSize="15dp"
+                android:checked="false"
+                android:onClick="pcheck"
+                android:layout_below="@+id/P_catagory"
+                android:layout_alignLeft="@+id/Female"
+                android:layout_alignStart="@+id/Female" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Temperature:"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold|italic"
+                android:id="@+id/diagnosis"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/Old"
+                android:layout_marginLeft="10dp" />
+
+            <CheckBox
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Below 100°F"
+                android:textColor="#FFFF"
+                android:textStyle="bold|italic"
+                android:id="@+id/fever1"
+                android:textSize="15dp"
+                android:checked="false"
+                android:onClick="tCheck"
+                android:layout_below="@+id/diagnosis"
+                android:layout_marginLeft="10dp" />
+
+            <CheckBox
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="100°F-104°F"
+                android:textColor="#FFFF"
+                android:textStyle="bold|italic"
+                android:id="@+id/fever2"
+                android:textSize="15dp"
+                android:checked="false"
+                android:onClick="tCheck"
+                android:layout_below="@+id/diagnosis"
+                android:layout_centerHorizontal="true" />
+
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:ems="10"
+                android:textStyle="bold|italic"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:background="@drawable/edittext"
+                android:paddingBottom="25dp"
+                android:hint="Enter Your Mobile Number"
+                android:id="@+id/edPhone"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/other1"
+                android:layout_marginLeft="10dp" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textStyle="bold|italic"
+                android:layout_gravity="center"
+                android:background="@drawable/edittext"
+                android:paddingBottom="25dp"
+                android:hint="Enter Your Date"
+                android:id="@+id/edDate"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/edPhone"
+                android:layout_marginLeft="10dp" />
+
+            <CheckBox
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="above 104°F"
+                android:textColor="#FFFF"
+                android:textStyle="bold|italic"
+                android:id="@+id/fever3"
+                android:textSize="15dp"
+                android:checked="false"
+                android:onClick="tCheck"
+                android:layout_below="@+id/diagnosis"
+                android:layout_toRightOf="@+id/fever2"
+                android:layout_toEndOf="@+id/fever2" />
+            <Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textStyle="bold|italic"
+                android:layout_gravity="center"
+                android:id="@+id/spinner"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/edDate"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Blood Pressure:"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold|italic"
+                android:id="@+id/blood"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/fever1"
+                android:layout_marginLeft="10dp" />
+
+            <CheckBox
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="High"
+                android:textColor="#FFFF"
+                android:textStyle="bold|italic"
+                android:id="@+id/blood1"
+                android:textSize="15dp"
+                android:checked="false"
+                android:onClick="bcheck"
+                android:layout_below="@+id/blood"
+                android:layout_alignLeft="@+id/fever1"
+                android:layout_alignStart="@+id/fever1" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Other:"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold|italic"
+                android:id="@+id/other"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/blood1"
+                android:layout_marginLeft="10dp" />
+
+            <CheckBox
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Headeche"
+                android:textColor="#FFFF"
+                android:textStyle="bold|italic"
+                android:id="@+id/other1"
+                android:textSize="15dp"
+                android:checked="false"
+                android:onClick="ocheck"
+                android:layout_below="@+id/other"
+                android:layout_alignLeft="@+id/other"
+                android:layout_alignStart="@+id/other" />
+
+
+            <CheckBox
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Normal"
+                android:textColor="#FFFF"
+                android:textStyle="bold|italic"
+                android:id="@+id/blood2"
+                android:textSize="15dp"
+                android:checked="false"
+                android:onClick="bcheck"
+                android:layout_below="@+id/blood"
+                android:layout_alignLeft="@+id/fever2"
+                android:layout_alignStart="@+id/fever2" />
+
+            <CheckBox
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Low"
+                android:textColor="#FFFF"
+                android:textStyle="bold|italic"
+                android:id="@+id/blood3"
+                android:textSize="15dp"
+                android:checked="false"
+                android:onClick="bcheck"
+                android:layout_above="@+id/other"
+                android:layout_toRightOf="@+id/blood2"
+                android:layout_toEndOf="@+id/blood2" />
+
+            <CheckBox
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Neckpain"
+                android:textColor="#FFFF"
+                android:textStyle="bold|italic"
+                android:id="@+id/other2"
+                android:textSize="15dp"
+                android:checked="false"
+                android:onClick="ocheck"
+                android:layout_below="@+id/other"
+                android:layout_alignLeft="@+id/blood2"
+                android:layout_alignStart="@+id/blood2" />
+
+            <CheckBox
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Eyepain"
+                android:textColor="#FFFF"
+                android:textStyle="bold|italic"
+                android:id="@+id/other3"
+                android:textSize="15dp"
+                android:checked="false"
+                android:onClick="ocheck"
+                android:layout_above="@+id/edPhone"
+                android:layout_toRightOf="@+id/other2"
+                android:layout_toEndOf="@+id/other2" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textStyle="bold|italic"
+                android:id="@+id/spinname"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/spinner"
+                android:layout_marginLeft="10dp" />
+
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:text="REGISTER"
+                android:id="@+id/btnreg"
+                android:layout_below="@+id/spinname"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:onClick="onAppoint"
+                android:background="@drawable/btn_look"
+                android:layout_marginLeft="40dp"
+                android:textColor="#1593ED"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
+

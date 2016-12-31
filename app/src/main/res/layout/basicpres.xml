@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1a1a">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="''Welcome to our Basic Prescription''"
+                android:textColor="#33b2ff"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="
+1).For Fever you can take Napa, if 3 days passes away go to visit a doctor."
+                android:textColor="#ffffff"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/text1"/>
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="
+2).For Headache you can take Asprin or Disprin."
+                android:textColor="#ffffff"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/text2"/>
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="
+3).For Diarrhea drink orsaline and can take Flagyl tablet."
+                android:textColor="#ffffff"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/text3"/>
+
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="
+4).If you have vomiting problem you can take Stemetil tablet."
+                android:textColor="#ffffff"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/text4"/>
+
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="
+5).Skin itching you can take Alatrol."
+                android:textColor="#ffffff"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/text5"/>
+
+            <TextView
+                android:id="@+id/text7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="
+OR any kind serious dieases go to visit a Doctor."
+                android:textColor="#ffffff"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/text6"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

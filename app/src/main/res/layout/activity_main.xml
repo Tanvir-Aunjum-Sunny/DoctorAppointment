@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.hira.preproject3.MainActivity"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:background="#1A1A1A">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="WELCOME"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:textStyle="bold|italic"
+        android:textAlignment="center"
+        android:layout_margin="15dp" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Get Appointment"
+                android:id="@+id/btn_ga"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_look"
+                android:textColor="#ffffff"
+                android:drawableRight="@drawable/_contact_new"
+                android:textAlignment="center"
+                android:onClick="onRegister"/>
+
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Doctor&apos;s List"
+                android:id="@+id/btn_dl"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_look"
+                android:textColor="#ffffff"
+                android:textAlignment="center"
+                android:drawableRight="@drawable/doctornew"
+               android:onClick="onShowDoc"/>
+
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Patient&apos;s List"
+                android:id="@+id/btn_pl"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_look"
+                android:textColor="#ffffff"
+                android:textAlignment="center"
+                android:drawableRight="@drawable/patient"
+                android:onClick="onPatient"/>
+
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Basic Prescription"
+                android:id="@+id/btn_bp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_look"
+                android:textColor="#ffffff"
+                android:textAlignment="center"
+                android:drawableRight="@drawable/pill"
+                android:onClick="onBasic"/>
+
+            <Button
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Help"
+                android:id="@+id/btn_help"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_look"
+                android:textColor="#ffffff"
+                android:textAlignment="center"
+                android:drawableRight="@drawable/dialog_question"
+                android:onClick="onHelp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        android:id="@+id/btn_exit"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_look"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:drawableRight="@drawable/doorexit"
+        android:onClick="onExit"/>/>
+</LinearLayout>
